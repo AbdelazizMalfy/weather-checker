@@ -20,7 +20,6 @@ class Weather extends Component {
             
             axios.get(`https://api.weatherbit.io/v2.0/forecast/daily?lat=${lat}&lon=${lon}&key=${API_KEY}&days=3`)
             .then(res => {
-                console.log(res.data.data)
                 this.setState({ 
                     isLoading: false, 
                     cityName: res.data.city_name,
