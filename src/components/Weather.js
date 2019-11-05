@@ -53,9 +53,10 @@ class Weather extends Component {
                         </div>
                     </div>
                     <div className="card-body">
+                        <h5 className="card-title text-center ">Location: <span>{this.state.cityName}</span></h5>
                             { this.state.tempArray.map(tempItem => (
-                            <div className="card-text">
-                                <h5 className="card-title date">{tempItem.datetime}</h5>
+                            <div key={tempItem.datetime} className="card-text">
+                                <h5 className="date">{tempItem.datetime}</h5>
                                 <li>Temp:<span> {tempItem.temp}°</span></li>
                                 <li>Wind Speed:<span> {tempItem.wind_spd}</span></li>
                             </div>
